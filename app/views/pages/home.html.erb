@@ -1,0 +1,25 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<div class="owl-carousel owl-theme">
+  <% @featured_articles.each do |article| %>
+    <div class="item">
+      <img src="<%= article.image_url %>" alt="<%= article.title %>">
+      <h3><%= article.title %></h3>
+    </div>
+  <% end %>
+</div>
+<div id="article-feed">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <h4><%= link_to article.title, article_path(article) %></h4>
+      <p><%= truncate(article.content, length: 100) %></p>
+    </div>
+  <% end %>
+</div>
+<div class="search-bar">
+  <%= form_with(url: search_path, method: "get", local: false, html: { class: "search-form" }) do |form| %>
+    <%= form.text_field :query, placeholder: "Search articles...", class: "search-input" %>
+    <%= form.submit "Search", class: "search-button" %>
+  <% end %>
+</div>
+

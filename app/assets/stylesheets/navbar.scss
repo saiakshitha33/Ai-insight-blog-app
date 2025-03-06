@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #000; // Black background
+    color: #fff; // White text
+    padding: 1rem;
+  
+    .navbar-brand {
+      color: #007BFF; // Blue for brand
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  
+    .navbar-links a {
+      color: #fff; // White text for links
+      margin-left: 20px;
+      text-decoration: none;
+      &:hover {
+        color: #007BFF; // Blue on hover
+      }
+    }
+  }
+  

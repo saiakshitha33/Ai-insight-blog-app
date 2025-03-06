@@ -1,0 +1,39 @@
+.owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .owl-carousel .item h3 {
+    text-align: center;
+    color: #007BFF; // Blue titles
+  }
+  #article-feed .article {
+    background-color: #fff; // White background
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #007BFF; // Blue borders
+  
+    h4 a {
+      color: #000; // Black titles
+    }
+  
+    p {
+      color: #333; // Light black for text
+    }
+  }
+  .search-bar {
+    margin: 20px;
+    .search-input {
+      padding: 8px;
+      width: 80%;
+      margin-right: 10px;
+    }
+    .search-button {
+      padding: 8px 16px;
+      background-color: #007BFF; // Blue button
+      color: #fff; // White text
+      border: none;
+      cursor: pointer;
+    }
+  }
+  

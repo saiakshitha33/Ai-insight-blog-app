@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= content_for(:title) || "Aiblog" %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- SEO -->
+  <meta name="description" content="Explore AI insights and discussions on our AI-powered blog platform.">
+  <meta name="keywords" content="AI, Machine Learning, Data Science, Technology Blog">
+
+  <!-- Social Media Integration -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Aiblog' %>">
+  <meta property="og:description" content="Dive deep into the world of AI with Aiblog, your premier source for artificial intelligence insights.">
+  <meta property="og:image" content="<%= image_url('og_image.png') %>">
+  <meta property="og:url" content="<%= request.original_url %>">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Aiblog">
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : 'Aiblog' %>">
+  <meta name="twitter:description" content="Explore AI insights and discussions on our AI-powered blog platform.">
+  <meta name="twitter:image" content="<%= image_url('twitter_image.png') %>">
+
+  <!-- Preload key requests -->
+  <link rel="preload" href="<%= asset_path('application.css') %>" as="style">
+  <link rel="preload" href="<%= asset_path('application.js') %>" as="script">
+
+  <!-- Styles and Scripts -->
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+
+  <!-- Icons -->
+  <link rel="icon" href="/icon.png" type="image/png">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- PWA Manifest (uncomment if PWA features are set up and desired) -->
+  <%# tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+  <!-- Error Handling for JavaScript -->
+  <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+      console.log('An error occurred: ' + message);
+      return true; // Prevents default error handling.
+    };
+  </script>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
