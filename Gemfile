@@ -40,7 +40,7 @@ gem "thruster", require: false
 
 gem "owlcarousel-rails"
 gem "jquery-rails"
-gem "bootstrap", "~> 5.1.3"
+gem "bootstrap", "~> 5.3.3"
 gem "devise" # for user authentication
 gem "pundit" # for authorization
 gem "kaminari" # for pagination
