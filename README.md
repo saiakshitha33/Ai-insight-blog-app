@@ -12,7 +12,7 @@ The **AI Insight Blog** is a dynamic platform built with **Ruby on Rails**, desi
 ## Technologies Used
 - **Frontend:** HTML, CSS (Sass), JavaScript (Dojo, jQuery)
 - **Backend:** Ruby on Rails
-- **Database:** PostgreSQL
+- **Database:** SQLite3
 - **Web Server:** Nginx
 - **Containerization:** Docker
 
